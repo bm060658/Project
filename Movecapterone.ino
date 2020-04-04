@@ -13,11 +13,7 @@ void loop() {
   // put your main code here, to run repeatedly:
 
   //forward
-  digitalWrite(3,HIGH);
-  digitalWrite(4,LOW);
-  digitalWrite(6,LOW);
-  digitalWrite(7,HIGH);
-  delay(2500);
+  forward(150);
 
   //right
   digitalWrite(3,HIGH);
@@ -36,4 +32,15 @@ void loop() {
   digitalWrite(7,HIGH);
   analogWrite(8,200);
   delay(2500);
+}
+
+void forward(int speed)
+{
+  digitalWrite(3,HIGH);
+  digitalWrite(4,LOW);
+  digitalWrite(6,LOW);
+  digitalWrite(7,HIGH);
+  analogWrite(5,speed);
+  analogWrite(8,0);
+  //delay(2500);
 }
